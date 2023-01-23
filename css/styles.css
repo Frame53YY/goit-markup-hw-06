@@ -580,7 +580,7 @@ footer {
 
 .footer-form .button.primary {
 	display: inline-flex;
-	margin-left: 24px;
+	margin-left: 20px;
 	padding: 8px 24px;
 	line-height: var(--main-line-height);
 }
