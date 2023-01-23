@@ -57,7 +57,9 @@
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <!--Button-->
-          <button data-modal-open class="button primary" type="button">Order Service</button>
+          <button data-modal-open class="button primary" type="button">
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -409,6 +411,7 @@
             digital marketing & growth solutions.
           </p>
         </div>
+
         <div class="link-container">
           <h2 class="links-header">Social media</h2>
           <ul class="social-links footer list">
@@ -442,19 +445,75 @@
             </li>
           </ul>
         </div>
-      </div>
-    </footer>
-			<!-- Modal -->
-			<div class="backdrop is-hidden" data-modal>
-				<div class="modal">
-					<button data-modal-close class="btn-close">
-						<svg width="8px" height="8px">
-							<use href="./images/icons.svg#icon-close"></use>
+
+				<div class="footer-form">
+					<h2 class="links-header">Subscribe</h2>
+
+					<input type="email" name="email" id="email" placeholder="E-mail"/>
+					
+					<button class="button primary" type="submit">Subscribe
+						<svg width="24px" height="24px">
+							<use href="./images/icons.svg#icon-plane"></use>
 						</svg>
 					</button>
 				</div>
-			</div>
+      </div>
+    </footer>
+    <!-- Modal -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button data-modal-close class="btn-close">
+          <svg width="8px" height="8px">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
 
-			<script src="./modal.js"></script>
+        <form class="form">
+          <h1 class="form-title">
+            Leave your contacts and we will call you back
+          </h1>
+
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" />
+          </div>
+
+          <div class="form-field">
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" id="phone" />
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+          </div>
+
+          <div class="form-field">
+            <label for="comment">Comment</label>
+            <textarea
+              name="comment"
+              id="comment"
+              rows="8"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+
+          <div class="agree">
+            <input type="checkbox" name="policy" id="policy" />
+            <label for="policy"
+              >I accept the terms and conditions of the
+              <a class="link" href="">Privacy Policy</a>
+            </label>
+          </div>
+
+					<div class="form-btn">
+						<button class="button primary" type="submit">Send</button>
+					</div>
+          
+        </form>
+      </div>
+    </div>
+
+    <script src="./modal.js"></script>
   </body>
 </html>
