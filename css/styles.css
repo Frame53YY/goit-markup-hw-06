@@ -661,6 +661,13 @@ textarea {
 	resize: none;
 	border: 1px solid rgba(33, 33, 33, 0.2);
 	border-radius: 4px;
+
+	transition: border-color 250ms var(--main-cubic-bezier);
+	outline: none;
+}
+
+textarea:focus {
+	border-color: var(--accent-color);
 }
 
 .form {
@@ -690,8 +697,53 @@ textarea {
 	flex-direction: column;
 }
 
+.input-wrap {
+	position: relative;
+}
+
+.form-input {
+	width: 100%;
+	margin: 0;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	padding-left: 38px;
+
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+
+	transition: border-color 250ms var(--main-cubic-bezier);
+	outline: none;
+}
+
+.form-icon {
+	position: absolute;
+	top: 50%;
+	left: 16px;
+	transform: translateY(-50%);
+
+	fill: var(--title-text-color);
+	transition: fill 250ms var(--main-cubic-bezier);
+}
+
+.form-input:focus~.form-icon {
+	fill: var(--accent-color);
+}
+
+.form-input:focus {
+	border-color: var(--accent-color);
+	border-radius: 4px;
+}
+
 .form-field label {
 	margin-bottom: 4px;
+}
+
+.form-field ::placeholder {
+	font-size: 12px;
+	line-height: 1.33;
+	letter-spacing: 0.04em;
+
+	color: rgba(117, 117, 117, 0.5);
 }
 
 .form-field label,
@@ -709,23 +761,40 @@ textarea {
 	color: var(--accent-color);
 }
 
-.form-field input {
-	margin: 0;
-	padding-top: 11px;
-	padding-bottom: 11px;
-	padding-left: 38px;
-
-	border: 1px solid rgba(33, 33, 33, 0.2);
-	border-radius: 4px;
+.checkbox {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	border: 0;
+	clip: rect(0 0 0 0);
 }
 
-.form input[type="checkbox"] {}
+.icon-noagree {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border: 1.25px solid var(--title-text-color);
+	border-radius: 2px;
+}
 
-.agree input {
-	margin-right: 10px;
+.icon-agree {
+	position: absolute;
+	top: 0;
+	left: 0;
+	scale: 0;
+
+	transition: scale 250ms var(--main-cubic-bezier);
+}
+
+.checkbox:checked~.icon-agree {
+	scale: 1;
 }
 
 .agree {
+	position: relative;
 	display: flex;
 	align-items: center;
 
@@ -733,12 +802,8 @@ textarea {
 	margin-bottom: 24px;
 }
 
-.form-field ::placeholder {
-	font-size: 12px;
-	line-height: 1.33;
-	letter-spacing: 0.04em;
-
-	color: rgba(117, 117, 117, 0.5);
+.agree label {
+	margin-left: 10px;
 }
 
 .form-btn {

@@ -450,7 +450,13 @@
           <p class="links-header">Subscribe</p>
 
           <form class="footer-form">
-            <input type="email" name="email" id="email" placeholder="E-mail" />
+            <input
+              type="email"
+              class="form-input"
+              name="email"
+              id="email"
+              placeholder="E-mail"
+            />
 
             <button class="button primary" type="submit">
               Subscribe
@@ -478,17 +484,32 @@
 
           <div class="form-field">
             <label for="name">Name</label>
-            <input type="text" name="name" id="name" />
+            <div class="input-wrap">
+              <input type="text" class="form-input" name="name" id="name" />
+              <svg class="form-icon" width="18px" height="18px">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
           </div>
 
           <div class="form-field">
             <label for="phone">Phone</label>
-            <input type="tel" name="phone" id="phone" />
+            <div class="input-wrap">
+              <input type="tel" class="form-input" name="phone" id="phone" />
+              <svg class="form-icon" width="18px" height="24px">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
           </div>
 
           <div class="form-field">
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" />
+            <div class="input-wrap">
+              <input type="email" class="form-input" name="email" id="email" />
+              <svg class="form-icon" width="18px" height="24px">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
           </div>
 
           <div class="form-field">
@@ -502,11 +523,15 @@
           </div>
 
           <div class="agree">
-            <input type="checkbox" name="policy" id="policy" />
-            <label for="policy"
-              >I accept the terms and conditions of the
+            <input class="checkbox" type="checkbox" name="policy" id="policy" />
+            <span class="icon-noagree"></span>
+            <label for="policy">
+              I accept the terms and conditions of the
               <a class="link" href="">Privacy Policy</a>
             </label>
+            <svg class="icon-agree" width="16px" height="16px">
+              <use href="./images/icons.svg#icon-agree"></use>
+            </svg>
           </div>
 
           <div class="form-btn">
