@@ -469,7 +469,7 @@
       </div>
     </footer>
     <!-- Modal -->
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button data-modal-close class="btn-close">
           <svg width="8px" height="8px">
@@ -523,15 +523,15 @@
           </div>
 
           <div class="agree">
-            <input class="checkbox" type="checkbox" name="policy" id="policy" />
-            <span class="icon-noagree"></span>
-            <label for="policy">
+            <label>
+              <input class="checkbox" type="checkbox" name="policy" />
+              <span class="icon-noagree"></span>
+              <svg class="icon-agree" width="16px" height="16px">
+                <use href="./images/icons.svg#icon-agree"></use>
+              </svg>
               I accept the terms and conditions of the
               <a class="link" href="">Privacy Policy</a>
             </label>
-            <svg class="icon-agree" width="16px" height="16px">
-              <use href="./images/icons.svg#icon-agree"></use>
-            </svg>
           </div>
 
           <div class="form-btn">
