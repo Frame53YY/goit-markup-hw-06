@@ -759,7 +759,7 @@ textarea:focus {
 	color: #8E8F99;
 }
 
-.agree label {
+.agree>label {
 	position: relative;
 	display: flex;
 	align-items: center;
