@@ -279,6 +279,9 @@ body {
 	width: 360px;
 	margin-right: 24px;
 	margin-bottom: 48px;
+	box-shadow: none;
+
+	transition: box-shadow 250ms var(--main-cubic-bezier);
 }
 
 .work-list .item:hover,
